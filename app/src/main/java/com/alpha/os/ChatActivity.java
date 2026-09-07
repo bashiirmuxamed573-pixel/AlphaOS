@@ -4,69 +4,66 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.LinearLayout;
-import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class ChatActivity extends Activity {
 
-    private LinearLayout messages;
     private EditText input;
-    private ScrollView scroll;
+    private TextView messages;
+    private Button send;
+    private AlphaCore alphaCore;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_chat);
 
-        messages = findViewById(R.id.chatMessages);
         input = findViewById(R.id.chatInput);
-        scroll = findViewById(R.id.chatScroll);
+        messages = findViewById(R.id.chatMessages);
+        send = findViewById(R.id.chatSend);
 
-        Button send = findViewById(R.id.chatSend);
-        Button mic = findViewById(R.id.chatMic);
+        alphaCore = new AlphaCore(this);
 
         send.setOnClickListener(v -> sendMessage());
 
-        mic.setOnClickListener(v -> {
-            addMessage("Alpha", "Dhageyso... 🎙️");
+        input.setOnEditorActionListener((v, actionId, event) -> {
+            sendMessage();
+            return true;
         });
     }
 
     private void sendMessage() {
+
         String text = input.getText().toString().trim();
 
-        if (text.isEmpty()) return;
+        if (text.isEmpty()) {
+            return;
+        }
 
-        addMessage("Adiga", text);
+        String answer = alphaCore.process(text);
 
+        String oldMessages = messages.getText().toString();
+
+        String newMessages;
+
+        if (oldMessages.isEmpty()) {
+            newMessages =
+                    "Adiga: " + text +
+                    "\n\nAlpha: " + answer;
+        } else {
+            newMessages =
+                    oldMessages +
+                    "\n\nAdiga: " + text +
+                    "\n\nAlpha: " + answer;
+        }
+
+        messages.setText(newMessages);
         input.setText("");
-
-        addMessage(
-            "Alpha",
-            "Haa, waan ku fahmay. Waxaan diyaar u ahay inaan kaa caawiyo."
-        );
     }
 
-    private void addMessage(String sender, String text) {
-        TextView message = new TextView(this);
-
-        message.setText(sender + ": " + text);
-        message.setTextColor(0xFFFFFFFF);
-        message.setTextSize(17);
-        message.setPadding(16, 16, 16, 16);
-
-        LinearLayout.LayoutParams params =
-            new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams.WRAP_CONTENT,
-                LinearLayout.LayoutParams.WRAP_CONTENT
-            );
-
-        params.setMargins(0, 8, 0, 8);
-        message.setLayoutParams(params);
-
-        messages.addView(message);
-
-        scroll.post(() -> scroll.fullScroll(ScrollView.FOCUS_DOWN));
+    @Override
+    protected void onDestroy() {
+        alphaCore = null;
+        super.onDestroy();
     }
 }
