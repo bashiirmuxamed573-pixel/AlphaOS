@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:hint="Wax aad rabto Alpha inuu xasuusto..."
         android:textColor="#FFFFFF"
-        android:hintTextColor="#77809A"
+        android:textColorHint="#77809A"
         android:padding="16dp"
         android:background="#18213A"/>
 

@@ -65,7 +65,7 @@
             android:layout_weight="1"
             android:hint="Qor fariintaada..."
             android:textColor="#FFFFFF"
-            android:hintTextColor="#7E899F"
+            android:textColorHint="#7E899F"
             android:padding="12dp"
             android:background="#151E31"/>
 

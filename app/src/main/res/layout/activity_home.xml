@@ -71,7 +71,7 @@
             android:layout_weight="1"
             android:hint="Alpha la hadal..."
             android:textColor="#FFFFFF"
-            android:hintTextColor="#7E899F"
+            android:textColorHint="#7E899F"
             android:padding="14dp"
             android:background="#151E31"/>
 
