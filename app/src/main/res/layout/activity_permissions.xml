@@ -13,7 +13,7 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="AMNI & OGGOLAANSHO"
+            android:text="AMNI &amp; OGGOLAANSHO"
             android:textColor="#FFFFFF"
             android:textSize="25sp"
             android:textStyle="bold"/>
