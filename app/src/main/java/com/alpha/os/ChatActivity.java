@@ -4,12 +4,15 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.LinearLayout;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 public class ChatActivity extends Activity {
 
     private EditText input;
-    private TextView messages;
+    private LinearLayout messages;
+    private ScrollView chatScroll;
     private Button send;
     private AlphaCore alphaCore;
 
@@ -20,6 +23,7 @@ public class ChatActivity extends Activity {
 
         input = findViewById(R.id.chatInput);
         messages = findViewById(R.id.chatMessages);
+        chatScroll = findViewById(R.id.chatScroll);
         send = findViewById(R.id.chatSend);
 
         alphaCore = new AlphaCore(this);
@@ -33,32 +37,48 @@ public class ChatActivity extends Activity {
     }
 
     private void sendMessage() {
-
         String text = input.getText().toString().trim();
 
         if (text.isEmpty()) {
             return;
         }
 
+        addMessage("Adiga: " + text, false);
+
         String answer = alphaCore.process(text);
 
-        String oldMessages = messages.getText().toString();
+        addMessage("Alpha: " + answer, true);
 
-        String newMessages;
+        input.setText("");
 
-        if (oldMessages.isEmpty()) {
-            newMessages =
-                    "Adiga: " + text +
-                    "\n\nAlpha: " + answer;
+        chatScroll.post(() ->
+                chatScroll.fullScroll(ScrollView.FOCUS_DOWN)
+        );
+    }
+
+    private void addMessage(String text, boolean alpha) {
+        TextView message = new TextView(this);
+
+        message.setText(text);
+        message.setTextColor(0xFFFFFFFF);
+        message.setTextSize(17);
+        message.setPadding(16, 16, 16, 16);
+
+        if (alpha) {
+            message.setBackgroundColor(0xFF151E31);
         } else {
-            newMessages =
-                    oldMessages +
-                    "\n\nAdiga: " + text +
-                    "\n\nAlpha: " + answer;
+            message.setBackgroundColor(0xFF101827);
         }
 
-        messages.setText(newMessages);
-        input.setText("");
+        LinearLayout.LayoutParams params =
+                new LinearLayout.LayoutParams(
+                        LinearLayout.LayoutParams.MATCH_PARENT,
+                        LinearLayout.LayoutParams.WRAP_CONTENT
+                );
+
+        params.setMargins(0, 0, 0, 12);
+
+        messages.addView(message, params);
     }
 
     @Override
