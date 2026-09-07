@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:background="#0B1020">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="XUSUUSTAYDA"
+        android:textColor="#FFFFFF"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="8dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Waxyaabaha Alpha kuu xasuusanayo"
+        android:textColor="#AAB4D0"
+        android:textSize="16sp"
+        android:gravity="center"
+        android:layout_marginBottom="24dp"/>
+
+    <EditText
+        android:id="@+id/memoryInput"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wax aad rabto Alpha inuu xasuusto..."
+        android:textColor="#FFFFFF"
+        android:hintTextColor="#77809A"
+        android:padding="16dp"
+        android:background="#18213A"/>
+
+    <Button
+        android:id="@+id/saveMemory"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="XAFID"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="24dp">
+
+        <TextView
+            android:id="@+id/memoryList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Xusuustu hadda way madhan tahay."
+            android:textColor="#FFFFFF"
+            android:textSize="17sp"
+            android:lineSpacingExtra="8dp"/>
+    </ScrollView>
+
+</LinearLayout>

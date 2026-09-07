@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#080D18">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:padding="16dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="ALPHA AI"
+            android:textColor="#FFFFFF"
+            android:textSize="23sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="● ONLINE"
+            android:textColor="#B8C4D9"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/chatScroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:id="@+id/chatMessages"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Alpha: Salaan. Maxaan kuu qaban karaa?"
+                android:textColor="#FFFFFF"
+                android:textSize="17sp"
+                android:padding="16dp"
+                android:background="#151E31"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:padding="8dp">
+
+        <EditText
+            android:id="@+id/chatInput"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:hint="Qor fariintaada..."
+            android:textColor="#FFFFFF"
+            android:hintTextColor="#7E899F"
+            android:padding="12dp"
+            android:background="#151E31"/>
+
+        <Button
+            android:id="@+id/chatMic"
+            android:layout_width="55dp"
+            android:layout_height="match_parent"
+            android:text="🎙️"/>
+
+        <Button
+            android:id="@+id/chatSend"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:text="➤"/>
+    </LinearLayout>
+
+</LinearLayout>

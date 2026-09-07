@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    android:background="#080D18">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="ALPHA OS"
+        android:textColor="#FFFFFF"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+    <TextView
+        android:id="@+id/alphaStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="● Alpha waa diyaar"
+        android:textColor="#AAB4D0"
+        android:textSize="15sp"
+        android:gravity="center"
+        android:layout_marginTop="6dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="18dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Salaan 👋"
+                android:textColor="#FFFFFF"
+                android:textSize="25sp"
+                android:textStyle="bold"/>
+
+            <TextView
+                android:id="@+id/alphaMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Maxaan kuu qaban karaa maanta?"
+                android:textColor="#DCE3F5"
+                android:textSize="18sp"
+                android:padding="18dp"
+                android:layout_marginTop="16dp"
+                android:background="#151E31"/>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/messageInput"
+            android:layout_width="0dp"
+            android:layout_height="55dp"
+            android:layout_weight="1"
+            android:hint="Alpha la hadal..."
+            android:textColor="#FFFFFF"
+            android:hintTextColor="#7E899F"
+            android:padding="14dp"
+            android:background="#151E31"/>
+
+        <Button
+            android:id="@+id/voiceButton"
+            android:layout_width="58dp"
+            android:layout_height="55dp"
+            android:text="🎙️"/>
+
+        <Button
+            android:id="@+id/sendButton"
+            android:layout_width="65dp"
+            android:layout_height="55dp"
+            android:text="➤"/>
+
+    </LinearLayout>
+
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/memoryButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🧠 Xusuus"/>
+
+            <Button
+                android:id="@+id/appsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="📱 Apps"/>
+
+            <Button
+                android:id="@+id/securityButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔐 Amni"/>
+
+            <Button
+                android:id="@+id/settingsButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚙️ Dejinta"/>
+
+        </LinearLayout>
+
+    </HorizontalScrollView>
+
+</LinearLayout>

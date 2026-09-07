@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#080D18">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="22dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="AMNI & OGGOLAANSHO"
+            android:textColor="#FFFFFF"
+            android:textSize="25sp"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/securityStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="🛡️ Hubinta amniga..."
+            android:textColor="#62E6A7"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="ALPHA OS wuxuu isticmaalaa oggolaanshaha Android oo keliya marka ficilku u baahan yahay."
+            android:textColor="#AAB4C8"
+            android:textSize="15sp"/>
+
+        <Button
+            android:id="@+id/microphoneButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="22dp"
+            android:text="🎙️ Oggolaanshaha Makarafoonka"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:id="@+id/microphoneStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Hubin..."
+            android:textColor="#AAB4C8"/>
+
+        <Button
+            android:id="@+id/notificationButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="12dp"
+            android:text="🔔 Oggolaanshaha Ogeysiisyada"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:id="@+id/notificationStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Hubin..."
+            android:textColor="#AAB4C8"/>
+
+        <Button
+            android:id="@+id/filesButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="12dp"
+            android:text="📁 Oggolaanshaha Faylasha"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:id="@+id/filesStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Hubin..."
+            android:textColor="#AAB4C8"/>
+
+        <Button
+            android:id="@+id/ttsButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="12dp"
+            android:text="🔊 Hubi TTS"
+            android:textAllCaps="false"/>
+
+        <TextView
+            android:id="@+id/ttsStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="Hubin..."
+            android:textColor="#AAB4C8"/>
+
+        <Button
+            android:id="@+id/settingsButton"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_marginTop="20dp"
+            android:text="⚙️ Fur Android App Settings"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+</ScrollView>
