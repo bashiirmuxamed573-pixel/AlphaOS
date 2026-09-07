@@ -23,6 +23,7 @@ public class PermissionsActivity extends Activity {
     private TextView filesStatus;
     private TextView ttsStatus;
     private TextView securityStatus;
+    private TextToSpeech tts;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -93,7 +94,7 @@ public class PermissionsActivity extends Activity {
     }
 
     private void checkTTS() {
-        TextToSpeech tts = new TextToSpeech(this, status -> {
+        tts = new TextToSpeech(this, status -> {
             if (status == TextToSpeech.SUCCESS) {
                 int result = tts.setLanguage(new Locale("so", "SO"));
 

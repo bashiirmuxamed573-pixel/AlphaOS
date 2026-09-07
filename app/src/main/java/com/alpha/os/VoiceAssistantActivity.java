@@ -32,9 +32,9 @@ public class VoiceAssistantActivity extends Activity {
 
         state = findViewById(R.id.voiceState);
         transcript = findViewById(R.id.transcript);
-        response = findViewById(R.id.alphaResponse);
+        response = findViewById(R.id.alphaReply);
 
-        Button mic = findViewById(R.id.micButton);
+        Button mic = findViewById(R.id.listenButton);
 
         if (checkSelfPermission(Manifest.permission.RECORD_AUDIO)
                 != PackageManager.PERMISSION_GRANTED) {
